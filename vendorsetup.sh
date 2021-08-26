@@ -100,7 +100,7 @@ export FOX_ADVANCED_SECURITY=1
 export OF_USE_TWRP_SAR_DETECT=1
 export OF_FL_PATH2=""
 export OF_FLASHLIGHT_ENABLE=1
-export FOX_RECOVERY_INSTALL_PARTITION="/dev/block/by-name/recovery"
+export FOX_RECOVERY_INSTALL_PARTITION="/dev/block/platform/bootdevice/by-name/recovery"
 # let's see what are our build VARs
 
 		if [ -n "$FOX_BUILD_LOG_FILE" -a -f "$FOX_BUILD_LOG_FILE" ]; then		  export | grep "FOX" >> $FOX_BUILD_LOG_FILE
