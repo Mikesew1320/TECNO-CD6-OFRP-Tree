@@ -1,6 +1,6 @@
 export TW_DEFAULT_LANGUAGE="en"
 export TARGET_DEVICE_ALT="CD6"
-export LC_ALL="C"
+#export LC_ALL="C"
 export ALLOW_MISSING_DEPENDENCIES=true
 export OF_USE_MAGISKBOOT=1
 export TARGET_ARCH=arm64
