@@ -1,6 +1,4 @@
-/system_image	        emmc	/dev/block/mapper/system                                flags=backup=1;display="System Image";flashimg=1
-/vendor_image	        emmc	/dev/block/mapper/vendor                                flags=backup=1;display="Vendor Image";flashimg=1
-/product_image	        emmc	/dev/block/mapper/product                               flags=backup=1;display="Product Image";flashimg=1
+
 
 /data			f2fs	/dev/block/platform/bootdevice/by-name/userdata		flags=fileencryption=aes-256-xts
 /proinfo		emmc	/dev/block/platform/bootdevice/by-name/proinfo		flags=display="proinfo";backup=1;flashimg=1
