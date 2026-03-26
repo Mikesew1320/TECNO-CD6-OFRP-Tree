@@ -25,19 +25,14 @@ PRODUCT_TARGET_VNDK_VERSION := 29
 PRODUCT_SHIPPING_API_LEVEL := 29
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 #PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root,recovery/root) \
  #   $(LOCAL_PATH)/prebuilt/dtb:dtb.img
 
-# Fastbootd
-PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.0-impl-mock \
-    fastbootd
-
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := CD6
-PRODUCT_NAME := omni_$(PRODUCT_DEVICE)
+PRODUCT_NAME := twrp_$(PRODUCT_DEVICE)
 PRODUCT_BRAND := TECNO
 PRODUCT_MODEL := TECNO CD6
 PRODUCT_MANUFACTURER := TECNO MOBILE LIMITED
