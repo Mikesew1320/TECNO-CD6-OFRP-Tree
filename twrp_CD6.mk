@@ -27,27 +27,12 @@ PRODUCT_SHIPPING_API_LEVEL := 29
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/twrp/config/common.mk)
 
-#PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root,recovery/root) \
- #   $(LOCAL_PATH)/prebuilt/dtb:dtb.img
-
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := CD6
 PRODUCT_NAME := twrp_$(PRODUCT_DEVICE)
 PRODUCT_BRAND := TECNO
 PRODUCT_MODEL := TECNO CD6
 PRODUCT_MANUFACTURER := TECNO MOBILE LIMITED
-
-TARGET_RECOVERY_DEVICE_MODULES += \
-    libkeymaster4 \
-    libpuresoftkeymasterdevice \
-    ashmemd_aidl_interface-cpp \
-    libashmemd_client
-
-TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/ashmemd_aidl_interface-cpp.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libashmemd_client.so
 
 # HACK: Set vendor patch level
 PRODUCT_PROPERTY_OVERRIDES += \
