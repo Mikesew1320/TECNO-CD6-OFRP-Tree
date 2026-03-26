@@ -15,16 +15,19 @@
 #
 
 # Release name
-PRODUCT_RELEASE_NAME := TECNO-CD6
+PRODUCT_RELEASE_NAME := CD6
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/twrp/config/common.mk)
 
+# Inherit from CD6 device
+$(call inherit-product, device/tecno/CD6/device.mk)
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := CD6
-PRODUCT_NAME := twrp_$(PRODUCT_DEVICE)
+PRODUCT_NAME := twrp_CD6
 PRODUCT_BRAND := TECNO
 PRODUCT_MODEL := TECNO CD6
 PRODUCT_MANUFACTURER := TECNO MOBILE LIMITED
