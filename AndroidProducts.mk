@@ -15,4 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-   $(LOCAL_DIR)/omni_CD6.mk
+   $(LOCAL_DIR)/twrp_CD6.mk
+
+COMMON_LUNCH_CHOICES := \
+    twrp_CD6-user \
+    twrp_CD6-userdebug \
+    twrp_CD6-eng
