@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/TECNO/CD6
+DEVICE_PATH := device/tecno/CD6
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -51,7 +51,7 @@ BOARD_KERNEL_OFFSET        := 0x00008000
 BOARD_RAMDISK_OFFSET       := 0x11a88000
 BOARD_DTB_OFFSET           := 0x07808000
 TARGET_KERNEL_ARCH := arm64
-TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb
+TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 BOARD_INCLUDE_RECOVERY_DTBO := true
@@ -94,8 +94,8 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
 # Crypto
-TW_INCLUDE_CRYPTO := true
-TW_INCLUDE_CRYPTO_FBE := true
+# TW_INCLUDE_CRYPTO := true
+# TW_INCLUDE_CRYPTO_FBE := true
 
 # Workaround for error copying vendor files to recovery ramdisk
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -128,24 +128,3 @@ PLATFORM_SECURITY_PATCH := 2099-12-31
 # Debug
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
-
-# SHRP
-SHRP_DARK := true
-SHRP_FLASH := 1
-SHRP_OFFICIAL := true
-SHRP_CUSTOM_FLASHLIGHT := true
-SHRP_FONP_1 := /sys/devices/virtual/torch/torch/torch_level
-SHRP_REC := /dev/block/platform/bootdevice/by-name/recovery
-SHRP_FLASH_MAX_BRIGHTNESS := 1
-SHRP_DEVICE_CODE := CD6
-SHRP_MAINTAINER := Mikesew1320
-SHRP_REC_TYPE := SAR
-SHRP_PATH := device/TECNO/$(SHRP_DEVICE_CODE)
-SHRP_DEVICE_TYPE := A_Only
-SHRP_PATH := device/TECNO/$(SHRP_DEVICE_CODE)
-SHRP_INTERNAL := /sdcard
-SHRP_EXTERNAL := /external_sd
-SHRP_OTG := /usb_otg
-SHRP_STATUSBAR_RIGHT_PADDING := 48
-SHRP_STATUSBAR_LEFT_PADDING := 48
-SHRP_NOTCH := true
